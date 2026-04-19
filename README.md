@@ -1,8 +1,9 @@
 # STM32 Temperature Monitor Bare-Metal
 
 (You might see a lot of files as `smart-fan`, I wanted to build a temperature controlled fan at first but then switched to using OLED, thus learning about I2C configuration)
-This is a learning project with dual LM35 temperature monitor on STM32F401RE using bare-metal register programming, with SSD1306 OLED output and Proteus simulation support.
 (All datasheets I referred to while making the notes and required for doing the project are uploaded under `_datasheets_` folder)
+
+This is a learning project with dual LM35 temperature monitor on STM32F401RE using bare-metal register programming, with SSD1306 OLED output and Proteus simulation support.
 
 ## What this project does
 
