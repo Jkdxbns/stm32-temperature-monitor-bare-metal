@@ -79,6 +79,9 @@ Global variables use 364 bytes (17%) of dynamic memory, leaving 1684 bytes for l
 | ADC trigger model | Hardware timer-triggered ADC sequence | Typically software-managed in loop |
 | I2C display driver flow | Manual start/address/data/stop handling | Library-level calls |
 
+STM32 RAM figure includes linker-reserved stack + heap (1536 bytes) in addition to globals, so it is intentionally conservative for runtime safety.
+Arduino IDE line reports global/static memory separately, so these two RAM numbers are not a direct apples-to-apples comparison.
+
 This comparison shows why this implementation is a strong embedded-systems project: it demonstrates precise low-level control, timer-synchronized acquisition, and interrupt-driven data handling with significantly compact firmware size.
 
 ## Run in Proteus
