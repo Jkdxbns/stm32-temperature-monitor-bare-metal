@@ -25,7 +25,7 @@ Dual LM35 temperature monitor on STM32F401RE using bare-metal register programmi
 
 - Watch/download: `proteus_working_video.mp4`
 
-### Live preview (GitHub README)
+### Live preview
 
 <video src="./proteus_working_video.mp4" controls muted playsinline width="900"></video>
 
