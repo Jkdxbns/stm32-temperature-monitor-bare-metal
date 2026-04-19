@@ -17,6 +17,7 @@ Dual LM35 temperature monitor on STM32F401RE using bare-metal register programmi
 - `_datasheets_/` : Reference PDFs used in development
 - `stm32cube_project/smart_fan_v1_0/` : STM32CubeIDE project
 - `proteus/` : Proteus simulation project
+- `arduino_for_compare/arduino_for_compare.ino` : Arduino implementation for side-by-side comparison
 - `learning_notes.pdf` : Personal study notes captured during development
 
 ## Prerequisites
@@ -58,6 +59,27 @@ arm-none-eabi-size smart_fan_v1_0.elf
 - SRAM (RAM) used: 1584 bytes (data + bss)
 
 These values are from Debug configuration and can change with compiler optimization level and feature additions.
+
+## Arduino comparison build logs
+
+For comparison, the Arduino sketch build reported:
+
+```text
+Sketch uses 14790 bytes (45%) of program storage space. Maximum is 32256 bytes.
+Global variables use 364 bytes (17%) of dynamic memory, leaving 1684 bytes for local variables. Maximum is 2048 bytes.
+```
+
+## Bare-metal vs Arduino (quick comparison)
+
+| Metric | STM32 bare-metal (this project) | Arduino sketch (comparison) |
+|---|---:|---:|
+| Program memory used | 3680 bytes (Flash: text + data) | 14790 bytes |
+| Data RAM used | 1584 bytes (SRAM: data + bss) | 364 bytes globals |
+| Peripheral control style | Direct register-level control | Framework/Arduino abstraction |
+| ADC trigger model | Hardware timer-triggered ADC sequence | Typically software-managed in loop |
+| I2C display driver flow | Manual start/address/data/stop handling | Library-level calls |
+
+This comparison shows why this implementation is a strong embedded-systems project: it demonstrates precise low-level control, timer-synchronized acquisition, and interrupt-driven data handling with significantly compact firmware size.
 
 ## Run in Proteus
 
