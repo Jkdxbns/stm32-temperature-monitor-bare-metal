@@ -19,6 +19,17 @@ Dual LM35 temperature monitor on STM32F401RE using bare-metal register programmi
 - `proteus/` : Proteus simulation project
 - `arduino_for_compare/arduino_for_compare.ino` : Arduino implementation for side-by-side comparison
 - `learning_notes.pdf` : Personal study notes captured during development
+- `proteus_working_video.mp4` : Recorded Proteus simulation run
+
+## Simulation recording
+
+- Watch/download: `proteus_working_video.mp4`
+
+### Live preview (GitHub README)
+
+<video src="./proteus_working_video.mp4" controls muted playsinline width="900"></video>
+
+If inline playback is not shown in your GitHub view, open the direct file link: [proteus_working_video.mp4](./proteus_working_video.mp4).
 
 ## Prerequisites
 
