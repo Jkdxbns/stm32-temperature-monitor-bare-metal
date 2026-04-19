@@ -1,0 +1,18 @@
+# STM32CubeIDE generated build output
+stm32cube_project/smart_fan_v1_0/Debug/
+stm32cube_project/smart_fan_v1_0/Release/
+
+# STM32CubeIDE local workspace metadata
+stm32cube_project/smart_fan_v1_0/.settings/
+
+# Optional local launch/runtime files
+*.launch
+
+# Proteus backup/autosave artifacts
+proteus/Project Backups/
+proteus/*.workspace
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp
